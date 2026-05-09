@@ -1,0 +1,74 @@
+# ============================================================
+# .gitignore — Centro Salud Universitario
+# Stack: Angular 20 + Java 17 / Jakarta EE + Maven + Docker
+# ============================================================
+
+# ─── JAVA / MAVEN ───────────────────────────────────────────
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+
+# ─── ANGULAR / NODE ─────────────────────────────────────────
+**/node_modules/
+**/dist/
+**/.angular/
+**/out-tsc/
+**/bazel-out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/.cache/
+**/coverage/
+
+# ─── ECLIPSE ────────────────────────────────────────────────
+**/.metadata/
+**/.settings/
+**/.classpath
+**/.project
+**/.recommenders/
+**/.factorypath
+**/Servers/
+
+# ─── INTELLIJ IDEA ──────────────────────────────────────────
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+**/out/
+
+# ─── VSCODE ─────────────────────────────────────────────────
+**/.history/
+
+# ─── ENTORNOS Y SECRETOS ────────────────────────────────────
+.env
+.env.*
+!.env.example
+**/secrets/
+**/*.pem
+**/*.key
+**/*.p12
+**/*.jks
+ssh_*
+!ssh_*.pub
+
+# ─── DOCKER ─────────────────────────────────────────────────
+# Dockerfile y docker-compose.yml se incluyen
+docker-compose.override.yml
+.docker/
+
+# ─── LOGS ───────────────────────────────────────────────────
+*.log
+**/logs/
+testem.log
+/libpeerconnection.log
+
+# ─── CLAUDE CODE ────────────────────────────────────────────
+.claude/
+
+# ─── SISTEMA OPERATIVO ──────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/

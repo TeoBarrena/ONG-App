@@ -1,0 +1,7 @@
+package modelos;
+
+public enum TipoOrganizacion {
+	ORGANIZACION_SOCIAL,
+	ORGANIZACION_DE_SALUD,
+	ORGANIZACION_SIN_FINES_DE_LUCRO
+}

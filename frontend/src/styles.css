@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+.form-control-plaintext {
+  cursor: default !important;
+}
+
+.dropdown-item:active {
+  background-color: #00434a !important;
+  color: #fff !important;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  color: #005a63 !important;            
+  border-color: #005a63 !important;      
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active {
+  color: #fff !important;                 
+  background-color: #00434a !important;  
+  border-color: #00434a !important;      
+}
+
+.btn-outline-primary:disabled {
+  color: #005a63 !important;              
+  border-color: #005a63 !important;
+  background-color: transparent !important;
+  opacity: 0.65;
+}
+.bg-primary-subtle {
+  background-color: #047680 !important;
+}
+
+.bg-primary-strong {
+  background-color: #004147 !important;
+}
+
+.btn-primary {
+  background-color: #005a63 !important;
+  border-color: #005a63 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:disabled {
+  background-color: #00434a !important;  
+  border-color: #00434a !important;
+  color: #fff !important;
+}
+
+/* Text */
+.text-primary {
+  color: #005a63 !important;
+}
+
+/* Backgrounds */
+.bg-primary {
+  background-color: #005a63 !important;
+  color: #fff !important;
+}
+
+/* Borders */
+.border-primary {
+  border-color: #005a63 !important;
+}
+
+/* Alerts */
+.alert-primary {
+  background-color: #cce7ea !important;
+  border-color: #b3dfe3 !important;
+  color: #005a63 !important;
+}
+
+/* Badges */
+.badge-primary {
+  background-color: #005a63 !important;
+  color: #fff !important;
+}
+
+/* Estilo principal para botones de paginación activos */
+.pagination .page-item.active .page-link {
+  background-color: #005a63;
+  color: white;
+}
+
+/* Estilo para los botones normales al pasar el mouse */
+.pagination .page-link:hover {
+  background-color: #e6f2f3;
+  color: #005a63;
+}
+
+/* Estilo base de todos los botones de paginación */
+.pagination .page-link {
+  color: #005a63;
+}
+

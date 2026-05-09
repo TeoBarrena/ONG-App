@@ -1,0 +1,9 @@
+{
+  "/rest": {
+    "_comentario": "Proxy para produccion. El WAR se despliega como ROOT.war en Tomcat, por lo que la API REST queda en /rest. Reemplazar el target con la URL del servidor de produccion propio.",
+    "target": "https://TU_SERVIDOR_DE_PRODUCCION",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

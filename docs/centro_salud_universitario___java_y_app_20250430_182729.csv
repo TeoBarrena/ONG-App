@@ -1,0 +1,583 @@
+Id,Title,Labels,Iteration,Iteration Start,Iteration End,Type,Estimate,Priority,Current State,Created at,Accepted at,Deadline,Requested By,Description,URL,Owned By
+5363363,Gestión de Historias Clínicas,gestión de historias clínicass,,,,epic,,,,"Apr 19, 2025",,,,"Conjunto de historias de usuario relacionadas con la carga, filtrado, eliminación y procesamiento de las historias clínicas subidas por el Personal de Salud",https://www.pivotaltracker.com/epic/show/5363363,
+5363362,Estadísticas,estadísticass,,,,epic,,,,"Apr 19, 2025",,,,"Conjunto de historias de usuario vinculadas a la generación de reportes estadísticos y generación de gráficos, divididos en secciones.",https://www.pivotaltracker.com/epic/show/5363362,
+5363361,Gestión de Organizaciones Sociales,gestión de organizacioness,,,,epic,,,,"Apr 19, 2025",,,,Conjunto de historias de usuario relacionadas con el registro y la administración de organizaciones sociales para el linkeo con cuentas de usuario,https://www.pivotaltracker.com/epic/show/5363361,
+5362564,Gestión de Encuestas,gestión de encuestass,,,,epic,,,,"Apr 16, 2025",,,,"Conjunto de historias de usuario relacionadas con la carga, filtrado, y procesamiento de las encuestas recobradas de los csv",https://www.pivotaltracker.com/epic/show/5362564,
+5360392,Gestión de Cuentas de Usuario,gestión de cuentas de usuarioo,,,,epic,,,,"Apr 10, 2025",,,,"Conjunto de historias de usuario relacionadas con el registro y la administración de las cuentas de usuario en el sistema.
+Operaciones de los usuarios: iniciar sesión, registro y cierre de sesión",https://www.pivotaltracker.com/epic/show/5360392,
+189076182,Agregar Organización Social,gestión de organizacioness,1,"Apr 28, 2025","May 4, 2025",feature,2,p3 - Low,started,"Apr 21, 2025",,,Felix Oyuela,"### ID: Agregar Organización Social
+
+### Titulo
+
+**Como** organización social/administrador
+**Quiero** crear una organizacion civil
+**Para** que los usuarios se puedan asociar
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Creacion exitosa como administrador
+```gherkin
+Dado que los datos cargados son válidos
+Cuando el administrador completa los campos y selecciona ""Crear""
+Entonces el sistema informa ""Organización social creada con éxito"" y la habilita automaticamente y redirige a la página de listado de organizaciones civiles
+```
+##### Escenario 2: Creacion exitosa como organización social 
+```gherkin
+Dado que los datos cargados son válidos
+Cuando el usuario de organización social completa los campos y selecciona ""Crear""
+Entonces el sistema informa ""Organización social creada con éxito, espere la habilitación de un administrador"" y la deshabilita automaticamente y redirige a la página principal del sistema
+```
+##### Escenario 3: Creación fallida por datos inválidos
+```gherkin
+Dado que los datos ingresados no son válidos/correctos
+Cuando se selecciona ""Crear"" 
+Entonces el sistema muestra los campos donde se ingreso información invalida  
+```",https://www.pivotaltracker.com/story/show/189076182,teobarrena
+189076185,Deshabilitar Organización Social,gestión de organizacioness,1,"Apr 28, 2025","May 4, 2025",feature,1,p3 - Low,started,"Apr 21, 2025",,,Felix Oyuela,"### ID: Deshabilitar Organización Social
+
+### Titulo
+
+**Como** administrador
+**Quiero** eliminar una organizacion social
+**Para** que no aparezca en el sistema
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Eliminado exitoso
+```gherkin
+**Dado** que la organizacion ""ejemplo"" no está eliminada
+**Cuando** se selecciona ""Deshabilitar""
+**Entonces** el sistema pide una confirmación y en caso positivo deshabilita la organización civil (borrado lógico)
+```
+##### Escenario 2: Eliminado fallido
+```gherkin
+**Dado** que la organizacion ""ejemplo"" no está eliminada
+**Cuando** se selecciona ""Deshabilitar"" 
+**Entonces** el sistema pide una confirmación y en caso negativo no se deshabilita la organización civil 
+```",https://www.pivotaltracker.com/story/show/189076185,teobarrena
+189076190,Listado de usuarios de una Organización Social,gestión de organizacioness,1,"Apr 28, 2025","May 4, 2025",feature,1,p3 - Low,started,"Apr 21, 2025",,,Felix Oyuela,"### ID: Listado de usuarios de una Organización Social
+
+### Titulo
+
+**Como** organización civil/administrador
+**Quiero** ver el listado de usuarios de la organización
+**Para** poder saber quienes son sus usuarios asociados
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Listado exitoso
+```gherkin
+Dado que la organizacion ""ejemplo"" tiene usuarios asociados 
+Cuando se selecciona ""Listar usuarios"" 
+Entonces el sistema muestra un listado con los usuarios asociados 
+```
+##### Escenario 2: Listado fallido por no haber usuarios asociados
+```gherkin
+Dado que la organizacion ""ejemplo"" no tiene usuarios asociados 
+Cuando se selecciona ""Listar usuarios"" 
+Entonces el sistema muestra un mensaje ""No tiene usuarios asociados""
+ ```",https://www.pivotaltracker.com/story/show/189076190,teobarrena
+189091834,Habilitar organización social,gestión de organizacioness,1,"Apr 28, 2025","May 4, 2025",feature,1,p3 - Low,started,"Apr 30, 2025",,,teobarrena,"### ID: Habilitar organización social
+
+### Titulo
+
+**Como** administrador
+**Quiero** habilitar una organización
+**Para** que los usuarios se pueden asociar a esa organización
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Habilitación exitosa
+```gherkin
+Dado que un usuario creo una organización
+Cuando el administrador cambia el estado a ""Habilitado"" y selecciona ""Guardar Cambios""
+Entonces el sistema guarda el estado de la organización en ""Habilitado"" e informa ""Cambios con éxito""
+```",https://www.pivotaltracker.com/story/show/189091834,teobarrena
+189076187,Listado de Organizaciones sociales,gestión de organizacioness,1,"Apr 28, 2025","May 4, 2025",feature,1,p3 - Low,started,"Apr 21, 2025",,,Felix Oyuela,"### ID: Listado de Organizaciones sociales
+
+### Titulo
+**Como** administrador
+**Quiero** ver el listado de organizaciones
+**Para** poder saber cuales son las organizaciones del sistema
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Listado exitoso
+```gherkin
+**Dado** que hay organizaciones cargadas en el sistema
+**Cuando** se selecciona ""Listar organizaciones""
+**Entonces** el sistema muestra un listado con las organizaciones 
+```
+##### Escenario 2: Listado fallido por no haber organizaciones cargadas
+```gherkin
+**Dado** que no hay organizaciones cargadas en el sistema
+**Cuando** se selecciona ""Listar organizaciones"" 
+**Entonces** el sistema muestra un mensaje ""No hay organizaciones cargadas"" 
+```",https://www.pivotaltracker.com/story/show/189076187,teobarrena
+189076184,Modificar Organización Social,gestión de organizacioness,1,"Apr 28, 2025","May 4, 2025",feature,2,p3 - Low,started,"Apr 21, 2025",,,Felix Oyuela,"### ID: Modificar Organización Social
+
+### Titulo
+**Como** administrador
+**Quiero** modificar los datos de una organización civil
+**Para** poder actualizar sus datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Modificación exitosa
+```gherkin
+**Dado** que los datos modificados tienen un formato válido
+**Cuando** se selecciona ""Editar"" 
+**Entonces** el sistema informa ""Cambios realizados con éxito"" y redirige a la página de listado de organizaciones civiles
+```
+##### Escenario 2: Modificación fallida
+```gherkin
+**Dado** que los datos modificados no tienen un formato válido
+**Cuando** se selecciona ""Editar"" 
+**Entonces** el sistema informa que campos tienen errores
+```",https://www.pivotaltracker.com/story/show/189076184,teobarrena
+189076263,Mostrar todas las estadísticas,estadísticass,,,,feature,0,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Mostrar todas las estadísticas
+
+### Titulo
+
+**Como** usuario
+**Quiero** ver las estadisticas
+**Para** obtener datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Vista exitosa
+```gherkin
+Dado que tengo permisos para ver las estadísticas
+Cuando se selecciona la página de Estadísticas
+Entonces el sistema muestra las estadísticas 
+```
+##### Escenario 2: Vista fallada por falta de permisos
+```gherkin
+Dado que no tengo permisos para ver las estadísticas
+Cuando se selecciona la página de Estadísticas 
+Entonces el sistema informa que necesitas permisos adicionales para consultar las estadísticas
+```",https://www.pivotaltracker.com/story/show/189076263,
+189076259,Mostrar estadísticas de una categoría,estadísticass,,,,feature,0,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Mostrar estadísticas de una categoría
+
+### Titulo
+
+**Como** usuario
+**Quiero** ver las estadisticas de una categoría
+**Para** consultar datos
+
+### Reglas de negocio
+* El usuario debe poseer permisos para ver la categoría
+
+### Criterios de aceptación
+##### Escenario 1: Vista exitosa
+```gherkin
+Dado que tengo permisos para ver las estadísticas de la categoría ""Salud""
+Cuando se selecciona la página de Estadísticas y la categoría ""Salud""
+Entonces el sistema muestra las estadísticas 
+```
+##### Escenario 2: Vista fallada por falta de permisos
+```gherkin
+Dado que no tengo permisos para ver las estadísticas de la categoria ""Salud""
+Cuando se selecciona la página de Estadísticas y la categoría ""Salud""
+Entonces el sistema informa que necesitas permisos adicionales para consultar las estadísticas
+```",https://www.pivotaltracker.com/story/show/189076259,
+189076250,Ver Encuesta,gestión de encuestass,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Ver Encuesta
+
+### Titulo
+
+**Como** administrador/personal de salud
+**Quiero** ver una encuesta
+**Para** consultar datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Vista exitosa
+```gherkin
+Dado que tengo permisos para ver las encuestas
+Cuando se selecciona la página de Encuestas
+Entonces el sistema muestra los archivos de descarga de las encuestas
+```
+##### Escenario 2: Vista fallada por falta de permisos
+```gherkin
+Dado que no tengo permisos para ver las encuestas
+Cuando se selecciona la página de Encuestas
+Entonces el sistema informa que necesitas permisos adicionales para consultar las encuestas
+```",https://www.pivotaltracker.com/story/show/189076250,
+189076247,Listar Encuestas,gestión de encuestass,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Listar Encuestas
+
+### Titulo
+
+**Como** administrador/personal de Salud
+**Quiero** ver el listado de las encuestas
+**Para** obtener datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Vista exitosa
+```gherkin
+Dado que tengo permisos para ver el listado de encuestas
+Cuando se selecciona la página de Encuestas
+Entonces el sistema muestra el listado de las encuestas
+```
+##### Escenario 2: Vista fallada por falta de permisos
+```gherkin
+Dado que no tengo permisos para ver el listado de encuestas
+Cuando se selecciona la página de Encuestas
+Entonces el sistema informa que necesitas permisos adicionales para consultar el listado de las encuestas
+```",https://www.pivotaltracker.com/story/show/189076247,
+189076245,Cargar Encuesta,gestión de encuestass,,,,feature,2,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Cargar Encuesta
+
+### Titulo
+
+**Como** administrador
+**Quiero** cargar una encuesta
+**Para** que la puedan contestar
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Carga exitosa
+```gherkin
+Dado el archivo de la encuesta es válido
+Cuando se selecciona ""Subir Encuesta""
+Entonces el sistema carga la encuesta en el sistema e informa ""Encuesta subido con éxito""
+```
+##### Escenario 2: Carga fallada por archivo inválido
+```gherkin
+Dado que el archivo de la encuesta no es válido
+Cuando se selecciona ""Subir Encuesta""
+Entonces el sistema informa ""Error en la carga del archivo, compruebe que el archivo sea válido""
+```",https://www.pivotaltracker.com/story/show/189076245,
+189076233,Registrar Cuenta de Usuario,gestión de cuentas de usuarioo,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Registrar Cuenta de Usuario
+
+### Titulo
+
+**Como** persona
+**Quiero** registrarme como usuario
+**Para** poder acceder a las funcionalidades de la página
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Registro exitoso
+```gherkin
+Dado que el mail ""teobarrena@gmail.com"" no está registrado en el sistema y la contraseña es válida
+Cuando el usuario carga los datos y selecciona la ""Enviar Solicitud""
+Entonces el sistema registra al usuario, lo deja en estado ""Pendiente"" y lo redirige a la página de login e informa ""Debe esperar la habilitación de parte de un administrador""
+```
+##### Escenario 2: Registro fallido por mail repetido
+```gherkin
+Dado que el mail ""teobarrena@gmail.com"" está registrado en el sistema, el número de matricula es valido, y la contraseña es válida
+Cuando el usuario carga los datos y selecciona la ""Enviar Solicitud""
+Entonces el sistema informa que ese mail ya se encuentra en el sistema
+```
+##### Escenario 3: Registro fallido por contraseña inválida
+```gherkin
+Dado que el mail ""teobarrena@gmail.com"" no está registrado en el sistema, y la contraseña no es válida
+Cuando el usuario carga los datos y selecciona la ""Enviar Solicitud""
+Entonces el sistema informa que esa contraseña es inválida
+```
+
+",https://www.pivotaltracker.com/story/show/189076233,
+189076226,Habilitar Usuario,gestión de cuentas de usuarioo,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Habilitar Usuario
+
+### Titulo
+
+**Como** administrador
+**Quiero** habilitar a un usuario
+**Para** que pueda acceder a las funcionalidades del sistema
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Habilitación exitosa
+```gherkin
+Dado que el usuario aparece en el listado de usuarios y está con estado ""Pendiente"" o ""Deshabilitado""
+Cuando el administrador cambia el estado a ""Habilitado"" y selecciona ""Guardar Cambios""
+Entonces el sistema guarda el estado del usuario en ""Habilitado"" e informa ""Cambios con éxito""
+```",https://www.pivotaltracker.com/story/show/189076226,
+189076230,Deshabilitar Usuario,gestión de cuentas de usuarioo,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Deshabilitar Usuario
+
+### Titulo
+
+**Como** administrador
+**Quiero** deshabilitar a un usuario
+**Para** que no pueda acceder a las funcionalidades del sistema
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Inhabilitación exitosa
+```gherkin
+Dado que el usuario aparece en el listado de usuarios y está con estado ""Habilitado"" o ""Pendiente""
+Cuando el administrador cambia el estado a ""Inhabilitado"" y selecciona ""Guardar Cambios""
+Entonces el sistema guarda el estado del usuario en ""Inhabilitado"" e informa ""Cambios con éxito""
+```",https://www.pivotaltracker.com/story/show/189076230,
+189076199,Listado de Cuentas de Usuario,gestión de cuentas de usuarioo,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Listado de Cuentas de Usuario
+
+### Titulo
+
+**Como** administrador
+**Quiero** ver el listado de los usuarios del sistema
+**Para** consultar datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Listado exitoso
+```gherkin
+Dado que hay usuarios en el sistema
+Cuando se selecciona la página de ""Usuarios""
+Entonces el sistema muestra el listado de los usuarios 
+```
+##### Escenario 2: Vista fallada por falta de usuarios en el sistema
+```gherkin
+Dado que no hay usuarios en el sistema
+Cuando se selecciona la página de ""Usuarios""
+Entonces el sistema informa ""No hay usuarios cargados en el sistema""
+```",https://www.pivotaltracker.com/story/show/189076199,
+189076201,Filtrado de Cuentas de Usuario,gestión de cuentas de usuarioo,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Filtrado de Cuentas de Usuario
+
+### Titulo
+
+**Como** administrador
+**Quiero** realizar un filtrado sobre el listado de los usuarios del sistema
+**Para** consultar datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Filtrado con mail exitoso 
+```gherkin
+Dado que hay usuarios en el sistema que cumplen la condición del filtrado por mail 
+Cuando se selecciona la página de ""Usuarios"" y se ingresa en el filtro de mail ""teobarrena@gmail.com""
+Entonces el sistema muestra el listado de los usuarios que tienen mail ""teobarrena@gmail.com""
+```
+##### Escenario 2: Filtrado con organizacion exitoso 
+```gherkin
+Dado que hay usuarios en el sistema que cumplen la condición del filtrado por organización
+Cuando se selecciona la página de ""Usuarios"" y se ingresa en el filtro de organización ""Iglesia""
+Entonces el sistema muestra el listado de los usuarios que están asociados a la organización ""Iglesia""
+```
+##### Escenario 3: Filtrado con tipo exitoso 
+```gherkin
+Dado que hay usuarios en el sistema que cumplen la condición del filtrado por tipo
+Cuando se selecciona la página de ""Usuarios"" y se ingresa en el filtro de tipo ""Personal de Salud""
+Entonces el sistema muestra el listado de los usuarios que tienen tipo ""Personal de Salud""
+```
+##### Escenario 4: Filtrado con estado exitoso 
+```gherkin
+Dado que hay usuarios en el sistema que cumplen la condición del filtrado por estado
+Cuando se selecciona la página de ""Usuarios"" y se ingresa en el filtro de estado ""Habilitado""
+Entonces el sistema muestra el listado de los usuarios que tienen estado ""Habilitado""
+```
+##### Escenario 5: Filtrado fallido por falta de usuarios que cumplan la condición
+```gherkin
+Dado que no hay usuarios en el sistema que cumplen la condición del filtrado
+Cuando se selecciona la página de ""Usuarios"" y se ingresan los respectivos filtros
+Entonces el sistema informa ""No se encontraron usuarios en el sistema que cumplan esas condiciones""
+```",https://www.pivotaltracker.com/story/show/189076201,
+189076236,Modificar Usuario,gestión de cuentas de usuarioo,,,,feature,1,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Modificar Usuario
+
+### Titulo
+
+**Como** administrador
+**Quiero** realizar modificaciones en el perfil de un usuario
+**Para** modificar sus datos
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+##### Escenario 1: Modificacion con exito
+```gherkin
+Dado que hay los datos modificados del usuario son válidos
+Cuando se modifican los datos y se selecciona ""Guardar cambios""
+Entonces el sistema registra los cambios en el sistema e informa ""Cambios guardados con éxito""
+```
+##### Escenario 2: Modificacion fallada
+```gherkin
+Dado que hay los datos modificados del usuario no son válidos
+Cuando se modifican los datos y se selecciona ""Guardar cambios""
+Entonces el sistema informa sobre qué campos hubo ingreso de datos inválidos
+```",https://www.pivotaltracker.com/story/show/189076236,
+189076145,Filtrado de Historias Clínicas,gestión de historias clínicass,,,,feature,,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Filtrado de Historias Clínicas
+
+### Titulo
+
+**Como** Administrador / Personal de Salud
+**quiero**  filltrar las Historias Clínicas por nombre del paciente / nombre del Personal de Salud
+**para** encontrar historias de interés rápidamente
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+###### Escenario 1: Filtrado exitoso
+```gherkin
+Dado que existe por lo menos una historia clínica con información coincidente
+Cuando el usuario escribe un nombre y pulsa el botón con forma de lupa o presiona 'enter'
+Entonces el sistema muestra las historias clínicas que coinciden en nombre de paciente o Personal de Salud
+```
+###### Escenario 2: Falla por falta de elementos
+```gherkin
+Dado que no existe por lo menos una historia clínica con información coincidente
+Cuando  el usuario escribe un nombre y pulsa el botón con forma de lupa o presiona 'enter'
+Entonces el sistema informa 'No hay historias clínicas coincidentes'
+```
+**Notas:** - el usuario es un Administrador o Personal de Salud.
+-",https://www.pivotaltracker.com/story/show/189076145,
+189076144,Listado completo de Historias Clínicas,gestión de historias clínicass,,,,feature,,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Listado completo de Historias Clínicas
+
+### Titulo
+
+**Como** Administrador
+**quiero**  listar las Historias Clínicas cargadas por todo el Personal de Salud
+**para** ver la información que hayan cargado
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+###### Escenario 1: Listado exitoso
+```gherkin
+Dado que un usuario cargó previamente por lo menos una historia clínica
+Cuando el usuario pulsa el botón 'Historias Clínicas'
+Entonces el sistema muestra las historias clínicas que hayan sido subidas por cualquier Personal de Salud
+```
+###### Escenario 2: Falla por falta de elementos
+```gherkin
+Dado que nadie cargó previamente ninguna historia clínica
+Cuando el usuario pulsa el botón 'Historias Clínicas'
+Entonces el sistema informa 'No hay historias clínicas cargadas'
+```
+**Notas:** - el usuario es un Administrador.
+-",https://www.pivotaltracker.com/story/show/189076144,
+189076143,Listado de Historias Clínicas,gestión de historias clínicass,,,,feature,,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Listado de Historias Clínicas
+
+### Titulo
+
+**Como** Personal de Salud
+**quiero**  listar las Historias Clínicas cargadas por mi
+**para** ver la información que haya cargado
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+###### Escenario 1: Listado exitoso
+```gherkin
+Dado que el usuario cargó previamente por lo menos una historia clínica
+Cuando el usuario pulsa el botón 'HC'
+Entonces el sistema muestra las historias clínicas que hayan sido subidas por el usuario en cuestión
+```
+###### Escenario 2: Falla por falta de elementos
+```gherkin
+Dado el usuario no cargó previamente ninguna historia clínica
+Cuando el usuario pulsa el botón 'HC'
+Entonces el sistema informa 'No hay historias clínicas cargadas'
+```
+**Notas:** - el usuario es un Personal de Salud.
+-",https://www.pivotaltracker.com/story/show/189076143,
+189076142,Cargar Historia Clínica,gestión de historias clínicass,,,,feature,,p3 - Low,unscheduled,"Apr 21, 2025",,,Felix Oyuela,"### ID: Cargar Historia Clínica
+
+### Titulo
+
+**Como** Personal de Salud
+**quiero** subir una historia clínica
+**para** llevar adelante un registro de mis pacientes
+
+### Reglas de negocio
+* -
+
+### Criterios de aceptación
+###### Escenario 1: Carga exitosa
+```gherkin
+Dado que el usuario ingresó nombre, descripción, y un archivo válido
+Cuando el usuario pulsa el botón 'Cargar'
+Entonces el sistema sube el archivo a la base de datos y lo almacena con su información. 
+```
+###### Escenario 2: Falla por archivo inválido
+```gherkin
+Dado el usuario ingresó nombre, descripción y un archivo de formato inválido
+Cuando el usuario pulsa el botón 'Cargar'
+Entonces el sistema informa el error y los formatos válidos.
+```
+###### Escenario 3: Falla por falta de información
+```gherkin
+Dado que el usuario no ingresó alguno de los campos requeridos
+Cuando el usuario presiona el botón 'Cargar'
+Entonces el sistema resalta los campos faltantes en rojo y pide completarlos.
+```
+**Notas:** - el usuario es un Personal de Salud.
+-",https://www.pivotaltracker.com/story/show/189076142,
+189069341,Habilitar usuarios,gestión de usuarios,,,,feature,1,p3 - Low,unscheduled,"Apr 16, 2025",,,teobarrena,"## NARRATIVA:
+**Como** administrador
+**Quiero** habilitar usuarios 
+**Para** que puedan acceder a las funcionalidades de la página
+
+Escenario 1: Habilitación exitosa
+
+**Dado** que el mail ""44356075"" corresponde al respectivo personal de salud o respectiva organización civil 
+**Cuando** el administrador selecciona ""Habilitar""
+**Entonces** el sistema le habilita la cuenta al mail ""44356075"" ",https://www.pivotaltracker.com/story/show/189069341,
+189055491,Cerrar sesión usuario,gestión de usuarios,,,,feature,1,p3 - Low,unscheduled,"Apr 10, 2025",,,teobarrena,"## Narrativa: 
+**Como** usuario 
+**Quiero** cerrar sesión 
+**Para** salir de mi cuenta
+
+## Reglas de negocio:
+
+## Criterios de aceptación:
+
+Escenario 1: Cerrar sesión exitoso
+
+**Dado** que el usuario ""44356075"" tiene la sesión abierta
+**Cuando** el usuario ""44356075"" selecciona ""Cerrar sesión""
+**Entonces** el sistema cierra la sesión y redirige a la pantalla de inicio de sesión",https://www.pivotaltracker.com/story/show/189055491,
+189055490,Iniciar sesión usuario,gestión de usuarios,,,,feature,1,p3 - Low,unscheduled,"Apr 10, 2025",,,teobarrena,"## NARRATIVA:
+**Como** persona 
+**Quiero** iniciar sesión 
+**Para** poder usar las funcionalidades de sistema
+
+Escenario 1: Inicio exitoso
+
+**Dado** que el dni ""44356075"" se encuentra en el sistema con la contraseña ""pixel48#"" la cual es corecta y no se encuentra bloqueado en el sistema
+**Cuando** la persona ingresa el dni ""44356075"" y la contraseña ""pixel48#""
+**Entonces** el sistema abre la sesión, se habilitan las funciones de los usuarios y se redirige a la pestaña vista usuario
+
+Escenario 2: Inicio fallido por dni inexistente
+
+**Dado** que el dni ""44356073"" no se encuentra en el sistema
+**Cuando** la  persona ingresa el dni ""44356073"" y la contraseña ""pixel48#"" 
+**Entonces** el sistema informa que algunos de los datos no son correctos
+
+Escenario 3: inicio de sesión fallido por contraseña incorrecta
+
+**Dado** el dni ""265478563"" que se encuentra en el sistema y la contraseña ""pedro234#"" que no es correcta
+**Cuando** la persona ingresa el dni ""265478563"" y la contraseña ""pedro234#""
+**Entonces** el sistema informa que algunos de los datos no son correctos",https://www.pivotaltracker.com/story/show/189055490,

@@ -1,0 +1,19 @@
+# ─── MAVEN BUILD OUTPUT ─────────────────────────────────────
+/target/
+
+# ─── INTELLIJ IDEA ──────────────────────────────────────────
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# ─── ECLIPSE / STS ──────────────────────────────────────────
+/.metadata/
+/.settings/
+.classpath
+.project
+.recommenders/
+.factorypath
+
+# ─── LOGS ───────────────────────────────────────────────────
+*.log

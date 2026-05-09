@@ -1,0 +1,79 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="production" transaction-type="RESOURCE_LOCAL">
+        <description>
+            Persistence unit que utiliza el singleton para producción.
+        </description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+         <!-- aca van las clases q van en la bd -->
+        <class>modelos.Area</class>
+        <class>modelos.Barrio</class>
+        <class>modelos.Campaña</class>
+        <class>modelos.Dato</class>
+        <class>modelos.DocumentoPublico</class>
+        <class>modelos.Encuestador</class>
+        <class>modelos.Jornada</class>
+        <class>modelos.OrganizacionSocial</class>
+        <class>modelos.Permiso</class>
+        <class>modelos.Reporte</class>
+        <class>modelos.Rol</class>
+        <class>modelos.Ubicacion</class>
+        <class>modelos.Usuario</class>
+        <class>modelos.Zona</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://{DB_HOST}:3306/{YOUR_DB_NAME}" />
+            <property name="jakarta.persistence.jdbc.user" value="{YOUR_DB_USER}" />
+            <property name="jakarta.persistence.jdbc.password" value="{YOUR_DB_PASSWORD}" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.use_sql_comments" value="true" />
+        </properties>
+    </persistence-unit>
+    
+    <persistence-unit name="development" transaction-type="RESOURCE_LOCAL">
+        <description>
+            Persistence unit que utiliza el singleton para desarrollo / producción.
+        </description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+         <!-- aca van las clases q van en la bd -->
+        <class>modelos.Area</class>
+        <class>modelos.Barrio</class>
+        <class>modelos.Campaña</class>
+        <class>modelos.Dato</class>
+        <class>modelos.DocumentoPublico</class>
+        <class>modelos.Encuestador</class>
+        <class>modelos.Jornada</class>
+        <class>modelos.OrganizacionSocial</class>
+        <class>modelos.Permiso</class>
+        <class>modelos.Reporte</class>
+        <class>modelos.Rol</class>
+        <class>modelos.Ubicacion</class>
+        <class>modelos.Usuario</class>
+        <class>modelos.Zona</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/{YOUR_DB_NAME}" />
+            <property name="jakarta.persistence.jdbc.user" value="{YOUR_DB_USER}" />
+            <property name="jakarta.persistence.jdbc.password" value="{YOUR_DB_PASSWORD}" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            
+            <property name="hibernate.format_sql" value="true" />
+            <!-- <property name="hibernate.use_sql_comments" value="true" /> -->
+            <property name="hibernate.type" value="trace" />
+        </properties>
+
+    </persistence-unit>
+    
+    
+</persistence>

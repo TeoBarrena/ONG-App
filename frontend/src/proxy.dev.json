@@ -1,0 +1,10 @@
+
+{
+  "/rest": {
+    "_comentario": "Redirige las llamadas al backend local (Docker en localhost:8080). El WAR se despliega como ROOT.war, por eso la ruta es /rest sin contexto adicional.",
+    "target": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

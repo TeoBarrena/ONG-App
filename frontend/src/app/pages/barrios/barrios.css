@@ -1,0 +1,9 @@
+.card-lista:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+  transition: transform 0.13s ease-in-out;
+}
+input[disabled].form-control-color {
+  opacity: 1;
+  pointer-events: none;
+}
